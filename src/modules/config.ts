@@ -2,7 +2,8 @@ import 'dotenv/config';
 
 export const api = {
   port: parseInt(process.env.API_PORT || '4000', 10),
-  corsDomain: process.env.API_CORS_DOMAIN
+  corsDomain: process.env.API_CORS_DOMAIN,
+  urlPrefix: process.env.API_URL_PREFIX || '/'
 };
 
 // export const email = {

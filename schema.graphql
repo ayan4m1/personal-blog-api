@@ -1,0 +1,18 @@
+scalar Date
+
+type Stats {
+  name: String!
+}
+
+input StatsInput {
+  id: Int!
+  name: String!
+}
+
+type Query {
+  stats: [Stats]
+}
+
+type Mutation {
+  createStat(stat: StatsInput!): Stats!
+}
