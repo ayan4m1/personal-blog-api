@@ -2,6 +2,9 @@
   "compilerOptions": {
     "declaration": true,
     "esModuleInterop": true,
+    "moduleResolution": "nodenext",
+    "module": "nodenext",
+    "target": "esnext",
     "outDir": "./lib"
   },
   "include": ["src/**/*.ts"],
