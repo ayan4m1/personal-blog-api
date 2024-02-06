@@ -41,5 +41,5 @@ export const start = async (): Promise<string> => {
     httpServer.listen({ port: api.port }, resolve)
   );
 
-  return `http://localhost:${api.port}${urlPrefix}`;
+  return `http://localhost:${api.port}${api.urlPrefix}`;
 };
