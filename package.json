@@ -1,0 +1,52 @@
+{
+  "author": "ayan4m1 <andrew@bulletlogic.com>",
+  "description": "Backing API for personal blog",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.11.16",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "auto-changelog": "^2.4.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "rollup": "^4.9.6",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "files": [
+    "lib/"
+  ],
+  "license": "MIT",
+  "main": "lib/index.cjs",
+  "module": "lib/index.js",
+  "name": "minestat-es",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayan4m1/personal-blog-api"
+  },
+  "scripts": {
+    "build": "rollup -c --configPlugin typescript",
+    "develop": "rollup -c -w --configPlugin typescript",
+    "lint": "eslint ./src --ext .ts",
+    "prepack": "rollup -c --configPlugin typescript",
+    "test": "jest",
+    "version": "auto-changelog -p -b 10 -l 10 && git add CHANGELOG.md",
+    "start": "node lib/index.js",
+    "prepare": "husky"
+  },
+  "type": "module",
+  "types": "lib/index.d.ts",
+  "version": "0.1.0"
+}
